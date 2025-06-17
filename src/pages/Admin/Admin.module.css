@@ -1,0 +1,10 @@
+.adminPage {
+    display: flex;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    max-width: calc(100vw - 232px);
+}

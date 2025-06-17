@@ -1,0 +1,214 @@
+.studPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.content {
+    width: 20%;
+    border: 1px solid #1e293b;
+    border-radius: 1rem;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: #3b82f6;
+    color: black;
+    letter-spacing: -0.025em;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.data {
+    padding: 1rem;
+}
+
+.dataHeader {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 1rem 0;
+    padding: 0.5rem;
+}
+
+.dataHeader > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.dst {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+}
+
+.dsd {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.dataElements {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.dataElement {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    border: 1px solid #1e293b;
+    border-radius: 1rem;
+    padding: 0.25rem 0.75rem;
+    box-sizing: border-box;
+}
+
+.dataElementTG {
+    color: #3b82f6;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    text-decoration: none;
+}
+
+.dataElementTG:hover {
+    color: #60a5fa;
+}
+
+.editButton {
+    margin-top: 1rem;
+    width: 100%;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    border-radius: 1rem;
+    border: 1px solid #1e293b;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.editButton:hover {
+    background-color: rgba(30, 41, 59, 0.8);
+}
+
+.exitButton {
+    margin-top: 0.5rem;
+    width: 100%;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: #3b82f6;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.exitButton:hover {
+    background-color: rgba(59, 130, 246, 0.7);
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #020817;
+    border: 1px solid #363636;
+    border-radius: 12px;
+    padding: 24px;
+    z-index: 1001;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    animation: scaleInModal 0.3s ease forwards;
+    outline: none;
+}
+
+.modalClose {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.modal label {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+.modal input {
+    background-color: transparent;
+    color: #fefefe;
+    border-radius: 1rem;
+    border: 1px solid #1e293b;
+    padding: 0.5rem;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.modal input[name="dateOfBirth"]:not(:placeholder-shown) {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
+.modal input:focus-within {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    border-color: #3b82f6;
+}
+
+.saveButton {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.6rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 1rem;
+    border: none;
+    background-color: #3b82f6;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.saveButton:hover {
+    background-color: rgba(59, 130, 246, 0.8)
+}
+
+.md {
+    color: rgba(255, 255, 255, 0.6);
+}

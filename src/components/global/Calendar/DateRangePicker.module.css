@@ -1,0 +1,242 @@
+.calendar {
+    width: 300px;
+    border: 1px solid rgba(209, 213, 219, 0.46);
+    border-radius: 12px;
+    padding: 12px;
+    font-family: sans-serif;
+    background: #1f2937;
+    color: #ffffff;
+    user-select: none;
+    z-index: 9999;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.navBtn {
+    background-color: #1e40af;
+    border: none;
+    color: #ffffff;
+    font-size: 20px;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    line-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.navBtn:hover {
+    background-color: #1e3a8a;
+}
+
+.monthLabel {
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    color: #ffffff;
+}
+
+.monthLabel:hover {
+    background-color: #4b5563;
+}
+
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px;
+    color: #d1d5db;
+}
+
+.weekday {
+    padding: 4px 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.day {
+    height: 36px;
+    text-align: center;
+    line-height: 36px;
+    cursor: pointer;
+    border-radius: 0;
+    position: relative;
+    z-index: 1;
+    padding: 0 6px;
+    border-left: 1px solid transparent;
+    color: #ffffff;
+    user-select: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.day:first-child {
+    border-left: none;
+}
+
+.day:hover {
+    background-color: #e5e7eb;
+    color: #1f2937;
+}
+
+.outside {
+    color: #6b7280;
+}
+
+.rangeStart {
+    background-color: #3b82f6;
+    color: #ffffff;
+    border-top-left-radius: 999px;
+    border-bottom-left-radius: 999px;
+    z-index: 2;
+    border-left: none;
+    padding-left: 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.rangeEnd {
+    background-color: #3b82f6;
+    color: #ffffff;
+    border-top-right-radius: 999px;
+    border-bottom-right-radius: 999px;
+    z-index: 2;
+    padding-right: 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.inRange {
+    background-color: #a4c7f6;
+    color: #1f2937;
+    z-index: 1;
+    border-radius: 0;
+    border-left: 1px solid #a4c7f6;
+    padding: 0 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.today {
+    outline: 2px solid #3b82f6;
+    outline-offset: -2px;
+    border-radius: 4px;
+}
+
+.clearBtn:hover {
+    background-color: #6b7280;
+}
+
+.monthYearPicker {
+    margin-top: 10px;
+}
+
+.yearSelector {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 0 8px;
+}
+
+.yearSelector button {
+    background: #374151;
+    border: none;
+    color: #ffffff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.yearSelector button:hover {
+    background: #4b5563;
+}
+
+.yearSelector span {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.monthGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+}
+
+.monthItem {
+    padding: 8px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 6px;
+    background: #374151;
+    color: #ffffff;
+    font-size: 14px;
+    user-select: none;
+    transition: background-color 0.3s ease;
+}
+
+.monthItem:hover {
+    background-color: #4b5563;
+}
+
+.selectedMonth {
+    background-color: #1e40af;
+    color: #ffffff;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 9999;
+}
+
+.cancelBtn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #4b5563;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    user-select: none;
+}
+
+.cancelBtn:hover {
+    background-color: #6b7280;
+}
+
+.clearBtn {
+    width: 100%;
+    margin-top: 12px;
+    padding: 8px 16px;
+    background-color: #4b5563;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    user-select: none;
+    align-self: center;
+}

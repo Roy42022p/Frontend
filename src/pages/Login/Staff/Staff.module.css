@@ -1,0 +1,130 @@
+.staff {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.authContainer {
+    width: 17%;
+    margin: 0 auto;
+    border-radius: 1rem;
+    border: 1px solid #1e293b;
+}
+
+.header {
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    font-size: 1.5rem;
+}
+
+.description {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.shd {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+    padding: 1.5rem;
+}
+
+.authForm {
+    display: grid;
+    gap: 1rem;
+    padding: 1.5rem;
+}
+
+.inputGroup {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.peer:disabled ~ .label {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.inputField {
+    background-color: transparent;
+    color: #fefefe;
+    border-radius: 1rem;
+    border: 1px solid #1e293b;
+    padding: 0.5rem;
+    outline: none;
+}
+
+.inputField:focus {
+    border-color: #3b82f6;
+}
+
+.submitButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    outline: none;
+    height: 2.25rem;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    background-color: #3b82f6;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    border: none;
+    cursor: pointer;
+}
+
+.submitButton:hover {
+    background-color: #2563eb;
+}
+
+.submitButton:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 1px #2563eb;
+}
+
+.submitButton:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.rlp {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.registerLink,
+.backToHome {
+    color: #676e7b;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.registerLink:hover,
+.backToHome:hover {
+    color: #2563eb;
+}
+
+.backToHome {
+    font-size: 0.875rem;
+}
+
+.rlph {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}

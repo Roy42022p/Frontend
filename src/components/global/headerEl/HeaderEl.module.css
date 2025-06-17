@@ -1,0 +1,168 @@
+.headerEl {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.titleSection {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.searchSection {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.buttonSection {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.buttonContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tsHeader {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.tsTitle {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.searchContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    background-color: transparent;
+    border: 1px solid #1e293b;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease;
+}
+
+.searchContainer:focus-within {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.searchIcon {
+    color: #666;
+    margin-right: 0.5rem;
+}
+
+.searchInput {
+    flex: 1;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 0.875rem;
+    color: #ffffff;
+}
+
+.searchInput::placeholder {
+    color: #999;
+}
+
+.searchContainer:focus-within {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    border-color: #3b82f6;
+}
+
+.buttonSection, .examFilters {
+    position: relative;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdownButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: 1px solid #1e293b;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dropdownButton:hover {
+    background-color: rgba(55, 52, 59, 0.3);
+}
+
+.dropdownIcon {
+    color: #666;
+}
+
+.dropdownMenu {
+    position: absolute;
+    background: #020817;
+    border: 1px solid #020817;
+    top: 100%;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    list-style: none;
+    padding: 0.5rem 0;
+    margin: 0.25rem 0 0;
+    min-width: 150px;
+}
+
+.dropdownItem {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.dropdownItem:hover {
+    background-color: rgba(55, 52, 59, 0.3);
+}
+
+.addButton,
+.calBtn {
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: 1px solid #1e293b;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.addButton:hover,
+.calBtn:hover {
+    background-color: rgba(55, 52, 59, 0.3);
+}
+
+.examFilters {
+    margin-left: 3rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.filterSelect {
+    padding: 0.4rem 0.6rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}

@@ -1,0 +1,158 @@
+@keyframes scaleInModal {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleOutModal {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.container {
+    padding: 1rem;
+}
+
+.tableContainer {
+    margin-top: 1rem;
+    border: 1px solid #1e293b;
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.thead {
+    font-weight: 500;
+    border-bottom: 1px solid #1e293b;
+}
+
+.table th {
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #5b5a5a;
+}
+
+.table td {
+    font-size: 0.875rem;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid #1e293b;
+    transition: background-color 0.3s ease;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(30, 41, 59, 0.3);
+}
+
+.table tbody tr:last-child {
+    border-bottom: none;
+}
+
+
+.table td:last-child,
+.table th:last-child {
+    text-align: center;
+}
+
+.error {
+    color: red;
+    font-size: 0.875rem;
+}
+
+.registered {
+    color: #fff;
+    background-color: #14532d;
+    font-weight: 500;
+    padding: 0 0.5rem;
+    border-radius: 0.5rem;
+    display: inline-block;
+}
+
+.notRegistered {
+    color: #fff;
+    background-color: #7f1d1d;
+    padding: 0 0.5rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    display: inline-block;
+}
+
+.actionButton {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.link {
+    text-decoration: none;
+    background-color: #3b82f6;
+    color: black;
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-right: 4px;
+    display: inline-block;
+    font-size: 12px;
+}
+
+.actionCell {
+    position: relative;
+}
+
+
+.dropdownMenu {
+    position: fixed;
+    z-index: 1010;
+    transform: translateX(-70%) translateY(5%);
+    background: #020817;
+    border: 1px solid #1e293b;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 1.2rem;
+    width: 20rem;
+    text-align: center;
+    animation: scaleInModal 0.3s ease forwards;
+}
+
+
+
+
+.dropdownItem {
+    padding: 1rem 0;
+    font-size: 0.875rem;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: 100%;
+    border-radius: 1.2rem;
+    text-decoration: none;
+}
+
+.dropdownItem:hover {
+    background-color: rgba(55, 52, 59, 0.3);
+}

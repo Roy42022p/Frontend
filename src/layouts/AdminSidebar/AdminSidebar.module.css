@@ -1,0 +1,201 @@
+.sidebarWrapper {
+    position: relative;
+    display: flex;
+}
+
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: #131016;
+    color: white;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+    color: gray;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.menu::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: var(--highlight-top, 0);
+    width: 4px;
+    height: var(--highlight-height, 36px);
+    background-color: #3498db;
+    border-radius: 0 4px 4px 0;
+    transition: top 0.3s ease, height 0.3s ease;
+}
+
+.menu::after {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: var(--highlight-top, 0);
+    width: calc(100% - 16px);
+    height: var(--highlight-height, 36px);
+    background-color: #1f2937;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+    border-radius: 1rem;
+    transition: top 0.3s ease, height 0.3s ease;
+}
+
+.menuItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    text-decoration: none;
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.menuItem:hover {
+    background-color: #1e1b23;
+}
+
+.menuItem.active {
+    color: white;
+}
+
+.menuItem.active:hover {
+    background-color: transparent;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+}
+
+.profile {
+    margin-top: auto;
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 0.75rem;
+}
+
+.profile:hover {
+    background-color: #1e1b23;
+    transform: scale(1.02);
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #1e1b23;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.role {
+    font-size: 0.75rem;
+    color: #9ca3af;
+}
+
+.name {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: white;
+}
+
+.profilePanel {
+    position: absolute;
+    bottom: 1rem;
+    left: 210px;
+    background: transparent;
+    border: 1px solid #1e293b;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    width: 20rem;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    animation: slideIn 0.3s ease forwards;
+}
+
+.ppt {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+}
+
+.profilePanel.closing {
+    animation: slideOut 0.3s ease forwards;
+}
+
+
+.exitButton {
+    margin-top: 0.5rem;
+    width: 100%;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: #3b82f6;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.exitButton:hover {
+    background-color: rgba(59, 130, 246, 0.7);
+}
